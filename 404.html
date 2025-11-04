@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/portfolio/" />
+    <title>Redirecting...</title>
+
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Redirecting back to Tony Sirén’s portfolio." />
+    <link rel="icon" type="image/png" href="Favicon.png" />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      a {
+        color: #111;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="/portfolio/">click here</a>.</p>
+
+    <script>
+      // Redirect any unknown route to the SPA entry with hash fallback
+      const redirect = window.location.pathname.replace('/portfolio', '');
+      if (redirect) {
+        window.location.replace('/portfolio/#' + redirect);
+      } else {
+        window.location.replace('/portfolio/');
+      }
+    </script>
+  </body>
+</html>
